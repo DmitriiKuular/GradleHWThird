@@ -105,7 +105,8 @@ public class CardOrderTest {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Василий Пупкин");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+78883331313");
         driver.findElement(By.className("button__text")).click();
-        String expected = "input_invalid";
-        String actual = driver.findElement(By.cssSelector("[data-test-id=agreement]")).getCssValue("input_invalid");
+        String expected = "Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй";
+        String actual = driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid")).getText();
+        assertEquals(expected, actual);
     }
 }
