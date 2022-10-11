@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-//import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CardOrderTest {
     private WebDriver driver;
@@ -21,7 +21,7 @@ public class CardOrderTest {
     @BeforeAll
     static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
-//        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
